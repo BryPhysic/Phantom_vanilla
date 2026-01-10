@@ -1,0 +1,43 @@
+# =============================================
+# .gitignore para proyecto Geant4
+# =============================================
+
+# Archivos de macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Carpeta de compilación (muy pesada)
+build/
+
+# Archivos ROOT de salida (pueden ser muy grandes)
+*.root
+
+# Archivos objeto y ejecutables
+*.o
+*.a
+*.so
+*.dylib
+
+# Archivos temporales del editor
+*~
+*.swp
+*.swo
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Visual Studio Code
+.vscode/
+
+# CMake cache en directorio principal
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Logs
+*.log
