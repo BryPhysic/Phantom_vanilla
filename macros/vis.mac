@@ -1,0 +1,52 @@
+# ============================================================================
+# vis.mac - Macro de Visualizacion Interactiva
+# Ejecutar: ./phantom_sim (sin argumentos)
+# ============================================================================
+# Este macro configura la visualizacion grafica con OpenGL
+# Puedes rotar, hacer zoom, y ver la geometria del phantom
+# ============================================================================
+
+# ===== SECCION 1: Configuracion del Verbose =====
+# Reducimos la verbosidad para no llenar la pantalla de mensajes
+/control/verbose 0
+/run/verbose 0
+/tracking/verbose 0
+
+# ===== SECCION 2: Inicializar visualizacion =====
+# OGL = OpenGL (la libreria grafica que usamos)
+# OGLI = OpenGL Immediate mode
+/vis/open OGL 800x600-0+0
+
+# ===== SECCION 3: Dibujar la geometria =====
+/vis/drawVolume
+
+# ===== SECCION 4: Configurar el visor =====
+# viewpointThetaPhi: angulo de vision (theta=70 grados, phi=20 grados)
+/vis/viewer/set/viewpointThetaPhi 70 20
+# autoRefresh: actualiza automaticamente cuando hay cambios
+/vis/viewer/set/autoRefresh true
+
+# ===== SECCION 5: Decoraciones =====
+# Añadimos ejes de coordenadas para orientacion
+# Los numeros son: longitud en mm, x0, y0, z0 (origen), y color
+/vis/scene/add/axes 0 0 -300 200 mm
+
+# ===== SECCION 6: Trayectorias de particulas =====
+# Dibujamos las trayectorias de las particulas (protones, secundarios)
+/vis/scene/add/trajectories smooth
+
+# ===== SECCION 7: Acumular eventos =====
+# refresh: acumula trayectorias de multiples eventos
+# Asi puedes ver varias trayectorias al mismo tiempo
+/vis/scene/endOfEventAction accumulate
+
+# ===== SECCION 8: Mensaje de bienvenida =====
+/control/echo "=========================================="
+/control/echo "  Simulacion de Phantom de Agua - Hadronterapia"
+/control/echo "  Protones de 150 MeV"
+/control/echo "=========================================="
+/control/echo "  Comandos utiles:"
+/control/echo "    /run/beamOn 10    -> dispara 10 protones"
+/control/echo "    /vis/viewer/zoom 2 -> hace zoom"
+/control/echo "    exit              -> salir"
+/control/echo "=========================================="

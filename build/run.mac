@@ -1,0 +1,44 @@
+# ============================================================================
+# run.mac - Macro de Ejecucion Batch (sin GUI)
+# Ejecutar: ./phantom_sim run.mac
+# ============================================================================
+# Este macro ejecuta la simulacion completa y genera el archivo ROOT
+# Puedes cambiar el numero de protones en la linea /run/beamOn
+# ============================================================================
+
+# ===== SECCION 1: Configuracion del Verbose =====
+# Reducimos la verbosidad para ejecucion rapida
+# verbose 0 = silencioso, 1 = basico, 2 = detallado
+/control/verbose 0
+/run/verbose 1
+/tracking/verbose 0
+/event/verbose 0
+
+# ===== SECCION 2: Inicializacion =====
+# Aseguramos que Geant4 esta completamente inicializado
+/run/initialize
+
+# ===== SECCION 3: Configuracion del haz (opcional) =====
+# Si quieres cambiar la energia o posicion del haz, hazlo aqui
+# Por defecto: protones de 150 MeV desde z=-25cm hacia +z
+# Descomenta las lineas siguientes para modificar:
+
+# /gun/particle proton
+# /gun/energy 150 MeV
+# /gun/position 0 0 -500 mm
+# /gun/direction 0 0 1
+
+# ===== SECCION 4: Ejecutar la simulacion =====
+# beamOn N = dispara N particulas primarias (protones)
+# Para hadronterapia, 10000-100000 es buena estadistica
+# CAMBIA ESTE NUMERO segun tus necesidades:
+
+/run/beamOn 140000
+
+# ============================================================================
+# NOTA: Al terminar, se genera el archivo dose_output.root
+# Usa ROOT para analizar:
+#   root -l dose_output.root
+#   root [0] h_dose_z->Draw()    // curva de Bragg
+#   root [1] h_dose_xy->Draw("COLZ")  // dosis transversal
+# ============================================================================
