@@ -1,30 +1,40 @@
 // ============================================================================
-// RunAction.cc - Crea archivo ROOT con TTree de datos RAW completos
+// RunAction.cc - Genera archivos ROOT con nombres dinamicos
 // ============================================================================
-// Este archivo guarda TODOS los datos crudos de cada step para que puedas
-// hacer tu propio analisis en ROOT de forma artesanal
-// ============================================================================
-// TTree "raw_data" contiene:
-//   - eventID, trackID, parentID
-//   - particleName, pdgCode
-//   - x_pre, y_pre, z_pre, x_post, y_post, z_post
-//   - edep, kinE_pre, kinE_post
-//   - stepLength, processName, volumeName
+// Actualizado para funcionar con GPS (General Particle Source)
+// El nombre del archivo incluye energia, eventos y runID
 // ============================================================================
 
 #include "RunAction.hh"
 
 #include "G4Run.hh"
+#include "G4RunManager.hh"
 #include "G4SystemOfUnits.hh"
 
-#include <cstring> // para strncpy
+// ============================================================================
+// CODIGO ANTERIOR (ParticleGun) - Headers comentados
+// ============================================================================
+// #include "G4ParticleGun.hh"
+// #include "PrimaryGeneratorAction.hh"  // para obtener el gun
+// ============================================================================
+
+// ============================================================================
+// CODIGO NUEVO (GPS) - Headers activos
+// ============================================================================
+#include "G4GeneralParticleSource.hh"
+#include "PrimaryGeneratorAction.hh"
+// ============================================================================
+
+#include <cstring>
+#include <iomanip>
+#include <sstream>
 
 // ===== Constructor =====
 RunAction::RunAction()
     : fRootFile(nullptr), fTree(nullptr), fEventID(0), fTrackID(0),
       fParentID(0), fPdgCode(0), fX_pre(0), fY_pre(0), fZ_pre(0), fX_post(0),
       fY_post(0), fZ_post(0), fEdep(0), fKinE_pre(0), fKinE_post(0),
-      fStepLength(0) {
+      fStepLength(0), fBeamEnergy(0) {
   fParticleName[0] = '\0';
   fProcessName[0] = '\0';
   fVolumeName[0] = '\0';
@@ -34,18 +44,63 @@ RunAction::RunAction()
 RunAction::~RunAction() {}
 
 // ============================================================================
-// BeginOfRunAction() - Crea archivo ROOT y TTree
+// BeginOfRunAction() - Crea archivo ROOT con nombre dinamico
 // ============================================================================
 void RunAction::BeginOfRunAction(const G4Run *run) {
+  // ===== Obtener la energia del beam =====
+  // ========================================================================
+  // CODIGO ANTERIOR (ParticleGun):
+  // ========================================================================
+  /*
+  const PrimaryGeneratorAction* primaryGen =
+      dynamic_cast<const PrimaryGeneratorAction*>(
+          G4RunManager::GetRunManager()->GetUserPrimaryGeneratorAction()
+      );
+  if (primaryGen && primaryGen->GetParticleGun()) {
+      fBeamEnergy = primaryGen->GetParticleGun()->GetParticleEnergy() / MeV;
+  }
+  */
+  // ========================================================================
+
+  // ========================================================================
+  // CODIGO NUEVO (GPS):
+  // ========================================================================
+  const PrimaryGeneratorAction *primaryGen =
+      dynamic_cast<const PrimaryGeneratorAction *>(
+          G4RunManager::GetRunManager()->GetUserPrimaryGeneratorAction());
+
+  if (primaryGen && primaryGen->GetGPS()) {
+    // GPS puede tener distribuciones de energia, obtenemos la energia "mono"
+    fBeamEnergy = primaryGen->GetGPS()
+                      ->GetCurrentSource()
+                      ->GetEneDist()
+                      ->GetMonoEnergy() /
+                  MeV;
+  } else {
+    fBeamEnergy = 0.0;
+  }
+  // ========================================================================
+
+  // ===== Obtener numero de eventos programados =====
+  G4int nEvents = run->GetNumberOfEventToBeProcessed();
+  G4int runID = run->GetRunID();
+
+  // ===== Generar nombre del archivo =====
+  std::ostringstream filename;
+  filename << "raw_" << std::fixed << std::setprecision(0) << fBeamEnergy
+           << "MeV_" << nEvents << "evts_run" << runID << ".root";
+
   G4cout << "========================================" << G4endl;
-  G4cout << " Iniciando Run #" << run->GetRunID() << G4endl;
-  G4cout << " Creando raw_output.root (datos crudos)" << G4endl;
+  G4cout << " Iniciando Run #" << runID << G4endl;
+  G4cout << " Energia del beam: " << fBeamEnergy << " MeV" << G4endl;
+  G4cout << " Eventos programados: " << nEvents << G4endl;
+  G4cout << " Archivo de salida: " << filename.str() << G4endl;
   G4cout << "========================================" << G4endl;
 
-  // Crear archivo ROOT
-  fRootFile = new TFile("raw_output.root", "RECREATE");
+  // ===== Crear archivo ROOT =====
+  fRootFile = new TFile(filename.str().c_str(), "RECREATE");
 
-  // ===== TTree con TODOS los datos RAW =====
+  // ===== TTree con datos RAW =====
   fTree = new TTree("raw_data", "Raw step data for manual analysis");
 
   // Ramas de identificacion
@@ -70,12 +125,13 @@ void RunAction::BeginOfRunAction(const G4Run *run) {
   fTree->Branch("kinE_pre", &fKinE_pre, "kinE_pre/D");
   fTree->Branch("kinE_post", &fKinE_post, "kinE_post/D");
 
+  // Rama de energia del beam (para referencia)
+  fTree->Branch("beamEnergy", &fBeamEnergy, "beamEnergy/D");
+
   // Ramas de step
   fTree->Branch("stepLength", &fStepLength, "stepLength/D");
   fTree->Branch("processName", fProcessName, "processName/C");
   fTree->Branch("volumeName", fVolumeName, "volumeName/C");
-
-  G4cout << " TTree 'raw_data' creado con 16 ramas" << G4endl;
 }
 
 // ============================================================================
@@ -84,7 +140,7 @@ void RunAction::BeginOfRunAction(const G4Run *run) {
 void RunAction::EndOfRunAction(const G4Run *run) {
   G4cout << "========================================" << G4endl;
   G4cout << " Run #" << run->GetRunID() << " completado" << G4endl;
-  G4cout << " Eventos: " << run->GetNumberOfEvent() << G4endl;
+  G4cout << " Eventos procesados: " << run->GetNumberOfEvent() << G4endl;
 
   if (fRootFile && fTree) {
     G4cout << " Entries en TTree: " << fTree->GetEntries() << G4endl;
@@ -92,16 +148,7 @@ void RunAction::EndOfRunAction(const G4Run *run) {
     fRootFile->Write();
     fRootFile->Close();
 
-    G4cout << "========================================" << G4endl;
-    G4cout << " Archivo guardado: raw_output.root" << G4endl;
-    G4cout << " ----------------------------------------" << G4endl;
-    G4cout << " Ramas disponibles para analisis:" << G4endl;
-    G4cout << "   eventID, trackID, parentID" << G4endl;
-    G4cout << "   particleName, pdgCode" << G4endl;
-    G4cout << "   x_pre, y_pre, z_pre [cm]" << G4endl;
-    G4cout << "   x_post, y_post, z_post [cm]" << G4endl;
-    G4cout << "   edep, kinE_pre, kinE_post [MeV]" << G4endl;
-    G4cout << "   stepLength [mm], processName, volumeName" << G4endl;
+    G4cout << " Archivo guardado exitosamente!" << G4endl;
     G4cout << "========================================" << G4endl;
 
     delete fRootFile;
@@ -120,13 +167,11 @@ void RunAction::FillRawData(G4int eventID, G4int trackID, G4int parentID,
                             G4double kinE_post, G4double stepLength,
                             const G4String &processName,
                             const G4String &volumeName) {
-  // Llenar variables
   fEventID = eventID;
   fTrackID = trackID;
   fParentID = parentID;
   fPdgCode = pdgCode;
 
-  // Copiar strings (maximo 31 caracteres + null)
   strncpy(fParticleName, particleName.c_str(), 31);
   fParticleName[31] = '\0';
   strncpy(fProcessName, processName.c_str(), 31);
@@ -134,7 +179,6 @@ void RunAction::FillRawData(G4int eventID, G4int trackID, G4int parentID,
   strncpy(fVolumeName, volumeName.c_str(), 31);
   fVolumeName[31] = '\0';
 
-  // Posiciones en cm
   fX_pre = x_pre / cm;
   fY_pre = y_pre / cm;
   fZ_pre = z_pre / cm;
@@ -142,15 +186,12 @@ void RunAction::FillRawData(G4int eventID, G4int trackID, G4int parentID,
   fY_post = y_post / cm;
   fZ_post = z_post / cm;
 
-  // Energias en MeV
   fEdep = edep / MeV;
   fKinE_pre = kinE_pre / MeV;
   fKinE_post = kinE_post / MeV;
 
-  // Step length en mm
   fStepLength = stepLength / mm;
 
-  // Agregar entrada al TTree
   if (fTree) {
     fTree->Fill();
   }

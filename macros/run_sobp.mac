@@ -1,0 +1,66 @@
+# ============================================================================
+# run_sobp.mac - Macro para generar SOBP (Spread Out Bragg Peak)
+# ============================================================================
+# Este macro ejecuta multiples runs con diferentes energias
+# Cada run genera un archivo separado: raw_ENERGYMeV_EVENTSevts_runID.root
+# Luego puedes sumar todos los archivos en ROOT para obtener el SOBP
+# ============================================================================
+
+# ===== INICIALIZAR =====
+/run/initialize
+
+# ===== CONFIGURACION DE VISUALIZACION (opcional) =====
+# Comentar estas lineas si solo quieres datos sin GUI
+# /vis/open OGL
+# /vis/drawVolume
+# /vis/scene/add/trajectories smooth
+
+# ============================================================================
+# SOBP: Multiples energias con pesos (numero de protones)
+# ============================================================================
+# Las energias mas bajas (picos menos profundos) llevan menos peso
+# Las energias mas altas (picos mas profundos) llevan mas peso
+# Esta combinacion genera una meseta de dosis uniforme
+# ============================================================================
+
+# ----- Run 0: 120 MeV -----
+/gun/energy 120 MeV
+/run/beamOn 1000
+
+# ----- Run 1: 125 MeV -----
+/gun/energy 125 MeV
+/run/beamOn 1200
+
+# ----- Run 2: 130 MeV -----
+/gun/energy 130 MeV
+/run/beamOn 1400
+
+# ----- Run 3: 135 MeV -----
+/gun/energy 135 MeV
+/run/beamOn 1600
+
+# ----- Run 4: 140 MeV -----
+/gun/energy 140 MeV
+/run/beamOn 1800
+
+# ----- Run 5: 145 MeV -----
+/gun/energy 145 MeV
+/run/beamOn 2000
+
+# ----- Run 6: 150 MeV -----
+/gun/energy 150 MeV
+/run/beamOn 2200
+
+# ============================================================================
+# RESULTADO:
+# Se generaran 7 archivos:
+#   raw_120MeV_1000evts_run0.root
+#   raw_125MeV_1200evts_run1.root
+#   raw_130MeV_1400evts_run2.root
+#   raw_135MeV_1600evts_run3.root
+#   raw_140MeV_1800evts_run4.root
+#   raw_145MeV_2000evts_run5.root
+#   raw_150MeV_2200evts_run6.root
+#
+# Para hacer el SOBP, sumar todos los histogramas en ROOT
+# ============================================================================

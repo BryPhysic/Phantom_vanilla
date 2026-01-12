@@ -1,0 +1,113 @@
+# ============================================================================
+# run_sobp_realista.mac - SOBP con distribucion Gaussiana realista
+# ============================================================================
+# Configuracion:
+# - Energias: 150 a 120 MeV en pasos de 2 MeV (16 energias)
+# - Sigma: 1% de la energia (realista para aceleradores)
+# - Eventos: 10,000 por energia
+# ============================================================================
+
+# ===== INICIALIZAR =====
+/run/initialize
+
+# ============================================================================
+# CONFIGURACION BASE DEL GPS
+# ============================================================================
+/gps/particle proton
+/gps/pos/type Point
+/gps/pos/centre -40 0 0 cm
+/gps/direction 1 0 0
+
+# Activar distribucion Gaussiana de energia
+/gps/ene/type Gauss
+
+# ============================================================================
+# SOBP: 16 energias de 150 a 120 MeV (paso 2 MeV)
+# Sigma = 1% de la energia (dispersion realista del acelerador)
+# ============================================================================
+
+# ----- Run 0: 150 MeV (sigma = 1.50 MeV) -----
+/gps/ene/mono 150 MeV
+/gps/ene/sigma 1.50 MeV
+/run/beamOn 10000
+
+# ----- Run 1: 148 MeV (sigma = 1.48 MeV) -----
+/gps/ene/mono 148 MeV
+/gps/ene/sigma 1.48 MeV
+/run/beamOn 10000
+
+# ----- Run 2: 146 MeV (sigma = 1.46 MeV) -----
+/gps/ene/mono 146 MeV
+/gps/ene/sigma 1.46 MeV
+/run/beamOn 10000
+
+# ----- Run 3: 144 MeV (sigma = 1.44 MeV) -----
+/gps/ene/mono 144 MeV
+/gps/ene/sigma 1.44 MeV
+/run/beamOn 10000
+
+# ----- Run 4: 142 MeV (sigma = 1.42 MeV) -----
+/gps/ene/mono 142 MeV
+/gps/ene/sigma 1.42 MeV
+/run/beamOn 10000
+
+# ----- Run 5: 140 MeV (sigma = 1.40 MeV) -----
+/gps/ene/mono 140 MeV
+/gps/ene/sigma 1.40 MeV
+/run/beamOn 10000
+
+# ----- Run 6: 138 MeV (sigma = 1.38 MeV) -----
+/gps/ene/mono 138 MeV
+/gps/ene/sigma 1.38 MeV
+/run/beamOn 10000
+
+# ----- Run 7: 136 MeV (sigma = 1.36 MeV) -----
+/gps/ene/mono 136 MeV
+/gps/ene/sigma 1.36 MeV
+/run/beamOn 10000
+
+# ----- Run 8: 134 MeV (sigma = 1.34 MeV) -----
+/gps/ene/mono 134 MeV
+/gps/ene/sigma 1.34 MeV
+/run/beamOn 10000
+
+# ----- Run 9: 132 MeV (sigma = 1.32 MeV) -----
+/gps/ene/mono 132 MeV
+/gps/ene/sigma 1.32 MeV
+/run/beamOn 10000
+
+# ----- Run 10: 130 MeV (sigma = 1.30 MeV) -----
+/gps/ene/mono 130 MeV
+/gps/ene/sigma 1.30 MeV
+/run/beamOn 10000
+
+# ----- Run 11: 128 MeV (sigma = 1.28 MeV) -----
+/gps/ene/mono 128 MeV
+/gps/ene/sigma 1.28 MeV
+/run/beamOn 10000
+
+# ----- Run 12: 126 MeV (sigma = 1.26 MeV) -----
+/gps/ene/mono 126 MeV
+/gps/ene/sigma 1.26 MeV
+/run/beamOn 10000
+
+# ----- Run 13: 124 MeV (sigma = 1.24 MeV) -----
+/gps/ene/mono 124 MeV
+/gps/ene/sigma 1.24 MeV
+/run/beamOn 10000
+
+# ----- Run 14: 122 MeV (sigma = 1.22 MeV) -----
+/gps/ene/mono 122 MeV
+/gps/ene/sigma 1.22 MeV
+/run/beamOn 10000
+
+# ----- Run 15: 120 MeV (sigma = 1.20 MeV) -----
+/gps/ene/mono 120 MeV
+/gps/ene/sigma 1.20 MeV
+/run/beamOn 10000
+
+# ============================================================================
+# RESULTADO: 16 archivos ROOT
+# raw_150MeV_10000evts_run0.root  hasta  raw_120MeV_10000evts_run15.root
+# Total: 160,000 protones simulados
+# ============================================================================

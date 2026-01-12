@@ -1,0 +1,70 @@
+# ============================================================================
+# run_gps.mac - Macro para GPS (General Particle Source)
+# ============================================================================
+# GPS permite controlar TODO desde el macro, sin recompilar!
+# Esto incluye: particula, energia, posicion, direccion, distribuciones
+# ============================================================================
+
+# ===== INICIALIZAR =====
+/run/initialize
+
+# ============================================================================
+# CONFIGURACION DEL GPS
+# ============================================================================
+
+# ----- Tipo de particula -----
+/gps/particle proton
+
+# ----- ENERGIA -----
+# Opcion 1: Energia FIJA (como ParticleGun)
+/gps/energy 150 MeV
+
+# Opcion 2: Distribucion GAUSSIANA (realista, como acelerador real)
+# Descomenta estas lineas para usar distribucion:
+# /gps/ene/type Gauss
+# /gps/ene/mono 150 MeV      # energia central
+# /gps/ene/sigma 1.5 MeV     # dispersion (tipico 1% del acelerador)
+
+# ----- POSICION -----
+/gps/pos/type Point
+/gps/pos/centre -40 0 0 cm
+
+# Para haz circular (mas realista):
+# /gps/pos/type Beam
+# /gps/pos/shape Circle
+# /gps/pos/centre -40 0 0 cm
+# /gps/pos/radius 0.5 cm
+
+# ----- DIRECCION -----
+/gps/direction 1 0 0
+
+# Para haz con divergencia angular (realista):
+# /gps/ang/type beam1d
+# /gps/ang/sigma_r 0.5 deg
+
+# ============================================================================
+# EJECUTAR
+# ============================================================================
+/run/beamOn 1000
+
+# ============================================================================
+# EJEMPLOS DE OTRAS CONFIGURACIONES:
+# ============================================================================
+#
+# === Cambiar energia sin recompilar ===
+# /gps/energy 120 MeV
+# /run/beamOn 1000
+#
+# === SOBP con distribucion gaussiana en cada energia ===
+# /gps/ene/type Gauss
+# /gps/ene/mono 150 MeV
+# /gps/ene/sigma 1.5 MeV
+# /run/beamOn 2000
+#
+# /gps/ene/mono 145 MeV
+# /run/beamOn 1800
+#
+# /gps/ene/mono 140 MeV
+# /run/beamOn 1600
+#
+# ============================================================================

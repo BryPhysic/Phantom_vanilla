@@ -14,11 +14,12 @@
 #include "G4VisExecutive.hh" // para la visualizacion grafica
 
 // ===== SECCION 2: Lista de Fisica =====
-// QGSP_BIC_HP es buena para hadronterapia:
+// QGSP_BIC es buena para hadronterapia:
 // - QGSP: Quark Gluon String Precompound (para particulas de alta energia)
 // - BIC: Binary Cascade (cascada binaria, buena para protones < 200 MeV)
-// - HP: High Precision (alta precision para neutrones)
-#include "QGSP_BIC_HP.hh"
+// NOTA: Usamos QGSP_BIC en vez de QGSP_BIC_HP para evitar errores de mutex en
+// macOS
+#include "QGSP_BIC.hh"
 
 // ===== SECCION 3: Nuestras clases (las que vamos a crear nosotros) =====
 #include "DetectorConstruction.hh"   // geometria: el phantom y el mundo
@@ -56,8 +57,8 @@ int main(int argc, char **argv) {
   // Geometria - nuestro phantom de agua y el mundo de aire
   runManager->SetUserInitialization(new DetectorConstruction());
 
-  // Fisica - QGSP_BIC_HP para hadronterapia
-  runManager->SetUserInitialization(new QGSP_BIC_HP());
+  // Fisica - QGSP_BIC para hadronterapia (sin HP para evitar errores mutex)
+  runManager->SetUserInitialization(new QGSP_BIC());
 
   // ===== SECCION 7: Acciones de usuario (opcionales pero utiles) =====
   // Estas clases nos permiten "enganchar" codigo en distintos momentos

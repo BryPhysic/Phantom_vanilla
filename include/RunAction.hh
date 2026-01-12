@@ -1,5 +1,8 @@
 // ============================================================================
-// RunAction.hh - Acciones del Run con datos RAW completos
+// RunAction.hh - Acciones del Run con nombres de archivo dinamicos
+// ============================================================================
+// El nombre del archivo se genera automaticamente con:
+//   energia_numeroEventos_runID.root
 // ============================================================================
 
 #ifndef RUN_ACTION_HH
@@ -14,6 +17,9 @@
 
 #include <string>
 
+// Forward declaration
+class G4ParticleGun;
+
 // ============================================================================
 class RunAction : public G4UserRunAction {
 public:
@@ -23,7 +29,7 @@ public:
   virtual void BeginOfRunAction(const G4Run *run);
   virtual void EndOfRunAction(const G4Run *run);
 
-  // ===== Metodo para llenar el TTree con datos RAW =====
+  // Metodo para llenar el TTree con datos RAW
   void FillRawData(G4int eventID, G4int trackID, G4int parentID,
                    const G4String &particleName, G4int pdgCode, G4double x_pre,
                    G4double y_pre, G4double z_pre, G4double x_post,
@@ -35,11 +41,11 @@ private:
   TFile *fRootFile;
   TTree *fTree;
 
-  // Variables para el TTree (todas las ramas)
+  // Variables para el TTree
   G4int fEventID;
   G4int fTrackID;
   G4int fParentID;
-  char fParticleName[32]; // string como char array para ROOT
+  char fParticleName[32];
   G4int fPdgCode;
   G4double fX_pre, fY_pre, fZ_pre;
   G4double fX_post, fY_post, fZ_post;
@@ -48,6 +54,9 @@ private:
   G4double fStepLength;
   char fProcessName[32];
   char fVolumeName[32];
+
+  // Variable para guardar la energia del beam (para el nombre del archivo)
+  G4double fBeamEnergy;
 };
 
 #endif
