@@ -1,66 +1,142 @@
 # ============================================================================
-# run_sobp.mac - Macro para generar SOBP (Spread Out Bragg Peak)
+# run_sobp_1MeV.mac - SOBP ALTA RESOLUCIÓN (128-150 MeV)
 # ============================================================================
-# Este macro ejecuta multiples runs con diferentes energias
-# Cada run genera un archivo separado: raw_ENERGYMeV_EVENTSevts_runID.root
-# Luego puedes sumar todos los archivos en ROOT para obtener el SOBP
+# Configuracion REALISTA:
+# - Tumor de ~4 cm de profundidad
+# - Paso Fino: 1 MeV (Para evitar ripples con sigma real)
+# - Sigma: 1% de la energía (Física real del ciclotrón)
+# - Total: 23 Capas
 # ============================================================================
 
-# ===== INICIALIZAR =====
 /run/initialize
 
-# ===== CONFIGURACION DE VISUALIZACION (opcional) =====
-# Comentar estas lineas si solo quieres datos sin GUI
-# /vis/open OGL
-# /vis/drawVolume
-# /vis/scene/add/trajectories smooth
+# ===== CONFIGURACION GPS BASE =====
+/gps/particle proton
+/gps/pos/type Point
+/gps/pos/centre -1 0 0 cm
+/gps/direction 1 0 0
+/gps/ene/type Gauss
 
 # ============================================================================
-# SOBP: Multiples energias con pesos (numero de protones)
-# ============================================================================
-# Las energias mas bajas (picos menos profundos) llevan menos peso
-# Las energias mas altas (picos mas profundos) llevan mas peso
-# Esta combinacion genera una meseta de dosis uniforme
+# BUCLE DE ENERGÍAS (150 MeV -> 128 MeV)
 # ============================================================================
 
-# ----- Run 0: 120 MeV -----
-/gun/energy 120 MeV
-/run/beamOn 1000
+# --- Capa 1 (Fondo - 150 MeV) ---
+/gps/ene/mono 150 MeV
+/gps/ene/sigma 1.50 MeV
+/run/beamOn 1000000
 
-# ----- Run 1: 125 MeV -----
-/gun/energy 125 MeV
-/run/beamOn 1200
+# --- Capa 2 (149 MeV) ---
+/gps/ene/mono 149 MeV
+/gps/ene/sigma 1.49 MeV
+/run/beamOn 100000
 
-# ----- Run 2: 130 MeV -----
-/gun/energy 130 MeV
-/run/beamOn 1400
+# --- Capa 3 (148 MeV) ---
+/gps/ene/mono 148 MeV
+/gps/ene/sigma 1.48 MeV
+/run/beamOn 100000
 
-# ----- Run 3: 135 MeV -----
-/gun/energy 135 MeV
-/run/beamOn 1600
+# --- Capa 4 (147 MeV) ---
+/gps/ene/mono 147 MeV
+/gps/ene/sigma 1.47 MeV
+/run/beamOn 100000
 
-# ----- Run 4: 140 MeV -----
-/gun/energy 140 MeV
-/run/beamOn 1800
+# --- Capa 5 (146 MeV) ---
+/gps/ene/mono 146 MeV
+/gps/ene/sigma 1.46 MeV
+/run/beamOn 100000
 
-# ----- Run 5: 145 MeV -----
-/gun/energy 145 MeV
-/run/beamOn 2000
+# --- Capa 6 (145 MeV) ---
+/gps/ene/mono 145 MeV
+/gps/ene/sigma 1.45 MeV
+/run/beamOn 100000
 
-# ----- Run 6: 150 MeV -----
-/gun/energy 150 MeV
-/run/beamOn 2200
+# --- Capa 7 (144 MeV) ---
+/gps/ene/mono 144 MeV
+/gps/ene/sigma 1.44 MeV
+/run/beamOn 100000
+
+# --- Capa 8 (143 MeV) ---
+/gps/ene/mono 143 MeV
+/gps/ene/sigma 1.43 MeV
+/run/beamOn 100000
+
+# --- Capa 9 (142 MeV) ---
+/gps/ene/mono 142 MeV
+/gps/ene/sigma 1.42 MeV
+/run/beamOn 100000
+
+# --- Capa 10 (141 MeV) ---
+/gps/ene/mono 141 MeV
+/gps/ene/sigma 1.41 MeV
+/run/beamOn 100000
+
+# --- Capa 11 (140 MeV) ---
+/gps/ene/mono 140 MeV
+/gps/ene/sigma 1.40 MeV
+/run/beamOn 100000
+
+# --- Capa 12 (139 MeV) ---
+/gps/ene/mono 139 MeV
+/gps/ene/sigma 1.39 MeV
+/run/beamOn 100000
+
+# --- Capa 13 (138 MeV) ---
+/gps/ene/mono 138 MeV
+/gps/ene/sigma 1.38 MeV
+/run/beamOn 100000
+
+# --- Capa 14 (137 MeV) ---
+/gps/ene/mono 137 MeV
+/gps/ene/sigma 1.37 MeV
+/run/beamOn 100000
+
+# --- Capa 15 (136 MeV) ---
+/gps/ene/mono 136 MeV
+/gps/ene/sigma 1.36 MeV
+/run/beamOn 100000
+
+# --- Capa 16 (135 MeV) ---
+/gps/ene/mono 135 MeV
+/gps/ene/sigma 1.35 MeV
+/run/beamOn 100000
+
+# --- Capa 17 (134 MeV) ---
+/gps/ene/mono 134 MeV
+/gps/ene/sigma 1.34 MeV
+/run/beamOn 100000
+
+# --- Capa 18 (133 MeV) ---
+/gps/ene/mono 133 MeV
+/gps/ene/sigma 1.33 MeV
+/run/beamOn 100000
+
+# --- Capa 19 (132 MeV) ---
+/gps/ene/mono 132 MeV
+/gps/ene/sigma 1.32 MeV
+/run/beamOn 100000
+
+# --- Capa 20 (131 MeV) ---
+/gps/ene/mono 131 MeV
+/gps/ene/sigma 1.31 MeV
+/run/beamOn 100000
+
+# --- Capa 21 (130 MeV) ---
+/gps/ene/mono 130 MeV
+/gps/ene/sigma 1.30 MeV
+/run/beamOn 100000
+
+# --- Capa 22 (129 MeV) ---
+/gps/ene/mono 129 MeV
+/gps/ene/sigma 1.29 MeV
+/run/beamOn 100000
+
+# --- Capa 23 (Frente - 128 MeV) ---
+/gps/ene/mono 128 MeV
+/gps/ene/sigma 1.28 MeV
+/run/beamOn 100000
 
 # ============================================================================
-# RESULTADO:
-# Se generaran 7 archivos:
-#   raw_120MeV_1000evts_run0.root
-#   raw_125MeV_1200evts_run1.root
-#   raw_130MeV_1400evts_run2.root
-#   raw_135MeV_1600evts_run3.root
-#   raw_140MeV_1800evts_run4.root
-#   raw_145MeV_2000evts_run5.root
-#   raw_150MeV_2200evts_run6.root
-#
-# Para hacer el SOBP, sumar todos los histogramas en ROOT
+# FIN: Tendrás 23 archivos .root
+# Usa sobp_solver.C para calcular los pesos automáticamente.
 # ============================================================================

@@ -85,9 +85,9 @@ void RunAction::BeginOfRunAction(const G4Run *run) {
   G4int nEvents = run->GetNumberOfEventToBeProcessed();
   G4int runID = run->GetRunID();
 
-  // ===== Generar nombre del archivo =====
+  // ===== Generar nombre del archivo (en carpeta output/) =====
   std::ostringstream filename;
-  filename << "raw_" << std::fixed << std::setprecision(0) << fBeamEnergy
+  filename << "output/raw_" << std::fixed << std::setprecision(0) << fBeamEnergy
            << "MeV_" << nEvents << "evts_run" << runID << ".root";
 
   G4cout << "========================================" << G4endl;
