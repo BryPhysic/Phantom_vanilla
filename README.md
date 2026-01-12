@@ -21,7 +21,7 @@ Este proyecto simula un haz de protones de **150 MeV** impactando un **phantom d
 ```
                            ← 100 cm →
     ┌────────────────────────────────────────────────────────┐
-    │                        WORLD                            │ ↕ 60 cm
+    │                        WORLD                           │ ↕ 60 cm
     │     ████           ┌──────────────────────┐            │
     │     ████ ──────────│                      │            │
     │     ████   Beam    │      PHANTOM         │            │
