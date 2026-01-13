@@ -1,0 +1,73 @@
+# ============================================================================
+# run_sobp_mono.mac - SOBP con GPS pero SIN dispersion Gaussiana
+# ============================================================================
+# Usa GPS con energia FIJA (mono, no Gauss)
+# Esto elimina el "ruido" de la dispersion de energia
+# ============================================================================
+
+/run/initialize
+
+# ===== CONFIGURACION GPS BASE =====
+/gps/particle proton
+/gps/pos/type Point
+/gps/pos/centre -40 0 0 cm
+/gps/direction 1 0 0
+
+# CLAVE: Usar energia MONO (sin Gauss)
+/gps/ene/type Mono
+
+# ============================================================================
+# 12 CAPAS: 150 MeV -> 128 MeV (paso 2 MeV) - Sin dispersion
+# ============================================================================
+
+# 150 MeV
+/gps/ene/mono 150 MeV
+/run/beamOn 10000
+
+# 148 MeV
+/gps/ene/mono 148 MeV
+/run/beamOn 10000
+
+# 146 MeV
+/gps/ene/mono 146 MeV
+/run/beamOn 10000
+
+# 144 MeV
+/gps/ene/mono 144 MeV
+/run/beamOn 10000
+
+# 142 MeV
+/gps/ene/mono 142 MeV
+/run/beamOn 10000
+
+# 140 MeV
+/gps/ene/mono 140 MeV
+/run/beamOn 10000
+
+# 138 MeV
+/gps/ene/mono 138 MeV
+/run/beamOn 10000
+
+# 136 MeV
+/gps/ene/mono 136 MeV
+/run/beamOn 10000
+
+# 134 MeV
+/gps/ene/mono 134 MeV
+/run/beamOn 10000
+
+# 132 MeV
+/gps/ene/mono 132 MeV
+/run/beamOn 10000
+
+# 130 MeV
+/gps/ene/mono 130 MeV
+/run/beamOn 10000
+
+# 128 MeV
+/gps/ene/mono 128 MeV
+/run/beamOn 10000
+
+# ============================================================================
+# RESULTADO: 12 archivos ROOT con energia EXACTA (sin dispersion)
+# ============================================================================

@@ -2233,7 +2233,6 @@ CMakeFiles/phantom_sim.dir/src/PrimaryGeneratorAction.cc.o: /Users/bryphy/U/Nucl
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/__wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/__xlocale.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_abort.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_bounds.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_ctermid.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_ctype.h \
@@ -2241,7 +2240,6 @@ CMakeFiles/phantom_sim.dir/src/PrimaryGeneratorAction.cc.o: /Users/bryphy/U/Nucl
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_locale_posix2008.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_mb_cur_max.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_printf.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_static_assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/_string.h \
@@ -2270,7 +2268,6 @@ CMakeFiles/phantom_sim.dir/src/PrimaryGeneratorAction.cc.o: /Users/bryphy/U/Nucl
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/arm/limits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/arm/signal.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/arm/types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__algorithm/all_of.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__algorithm/any_of.h \
@@ -2458,22 +2455,6 @@ CMakeFiles/phantom_sim.dir/src/PrimaryGeneratorAction.cc.o: /Users/bryphy/U/Nucl
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__exception/nested_exception.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__exception/operations.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__exception/terminate.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/file_status.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/file_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/operations.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/path.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/perms.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/space_info.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__format/enable_insertable.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__functional/binary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__functional/binary_negate.h \
@@ -2858,10 +2839,8 @@ CMakeFiles/phantom_sim.dir/src/PrimaryGeneratorAction.cc.o: /Users/bryphy/U/Nucl
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/errno.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/exception \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/format \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/forward_list \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/functional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/future \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/initializer_list \
@@ -2883,7 +2862,6 @@ CMakeFiles/phantom_sim.dir/src/PrimaryGeneratorAction.cc.o: /Users/bryphy/U/Nucl
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/ratio \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/sstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/stack \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/stddef.h \
@@ -3058,136 +3036,37 @@ CMakeFiles/phantom_sim.dir/src/PrimaryGeneratorAction.cc.o: /Users/bryphy/U/Nucl
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/data/Phantom_01/include/PrimaryGeneratorAction.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Geometry/BasicVector3D.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Geometry/Normal3D.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Geometry/Point3D.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Geometry/Transform3D.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Geometry/Transform3D.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Geometry/Vector3D.h \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Units/PhysicalConstants.h \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Units/SystemOfUnits.h \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Utility/defs.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/AxisAngle.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/AxisAngle.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/LorentzVector.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/LorentzVector.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/Rotation.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/Rotation.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/RotationInterfaces.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/RotationInterfaces.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/RotationX.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/RotationX.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/RotationY.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/RotationY.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/RotationZ.h \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/RotationZ.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/ThreeVector.h \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4AffineTransform.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4AffineTransform.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Allocator.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4AllocatorPool.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ApplicationState.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4AutoLock.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4AuxiliaryNavServices.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4AuxiliaryNavServices.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4BlockingList.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4BlockingList.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Cache.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4CacheDetails.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4DCofThisEvent.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4DataInterpolation.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4EnvironmentUtils.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Event.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Exception.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ExceptionSeverity.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeneralParticleSource.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeneralParticleSourceData.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeneralParticleSourceMessenger.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeomSplitter.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GlobalConfig.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4HCofThisEvent.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Log.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4LogicalVolume.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4LogicalVolume.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NavigationHistory.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NavigationHistory.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NavigationHistoryPool.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NavigationLevel.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NavigationLevel.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NavigationLevelRep.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NavigationLevelRep.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NavigationLogger.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Navigator.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Navigator.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NormalNavigation.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4NormalNavigation.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4PDefManager.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParameterisedNavigation.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParameterisedNavigation.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleDefinition.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleDefinition.icc \
+  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleGun.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleMomentum.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4PhysicsFreeVector.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4PhysicsVector.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4PhysicsVector.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4PhysicsVectorType.hh \
+  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleTable.hh \
+  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleTable.icc \
+  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleTableIterator.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4PrimaryParticle.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4PrimaryVertex.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ReferenceCountedHandle.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Region.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Region.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4RegularNavigation.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ReplicaNavigation.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ReplicaNavigation.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4RotationMatrix.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSAngDistribution.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSEneDistribution.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSPosDistribution.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSRandomGenerator.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SingleParticleSource.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartVoxelHeader.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartVoxelHeader.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartVoxelNode.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartVoxelNode.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartVoxelProxy.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartVoxelProxy.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4String.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4String.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SystemOfUnits.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Threading.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ThreeVector.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4TouchableHandle.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4TouchableHistory.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4TouchableHistory.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4TrajectoryContainer.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Transform3D.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Types.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4UIcommand.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4UIdirectory.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4UImessenger.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4UIparameter.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VDigiCollection.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VExternalNavigation.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VHitsCollection.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VNavigation.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VPVParameterisation.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VPhysicalVolume.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VPhysicalVolume.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VPrimaryGenerator.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VSolid.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VSolid.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VTouchable.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VTrajectory.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VUserEventInformation.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VVolumeMaterialScanner.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VoxelNavigation.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VoxelNavigation.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ios.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/evtdefs.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/geomdefs.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/geomwdefs.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/globals.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/pwdefs.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/templates.hh \
@@ -4114,11 +3993,8 @@ CMakeFiles/phantom_sim.dir/src/RunAction.cc.o: /Users/bryphy/U/Nuclear_lab_II/Wo
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4AuxiliaryNavServices.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4BlockingList.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4BlockingList.icc \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Cache.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4CacheDetails.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ClassificationOfNewTrack.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4DCofThisEvent.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4DataInterpolation.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4DataVector.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4DataVector.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4DensityEffectCalculator.hh \
@@ -4135,9 +4011,6 @@ CMakeFiles/phantom_sim.dir/src/RunAction.cc.o: /Users/bryphy/U/Nuclear_lab_II/Wo
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ExceptionSeverity.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ForceCondition.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GPILSelection.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeneralParticleSource.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeneralParticleSourceData.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeneralParticleSourceMessenger.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeomSplitter.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GlobalConfig.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4HCofThisEvent.hh \
@@ -4175,6 +4048,7 @@ CMakeFiles/phantom_sim.dir/src/RunAction.cc.o: /Users/bryphy/U/Nuclear_lab_II/Wo
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleChange.icc \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleDefinition.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleDefinition.icc \
+  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleGun.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleMomentum.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleTable.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleTable.icc \
@@ -4204,12 +4078,7 @@ CMakeFiles/phantom_sim.dir/src/RunAction.cc.o: /Users/bryphy/U/Nuclear_lab_II/Wo
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Run.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4RunManager.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4RunManagerKernel.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSAngDistribution.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSEneDistribution.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSPosDistribution.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSRandomGenerator.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SandiaTable.hh \
-  /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SingleParticleSource.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartTrackStack.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartVoxelHeader.hh \
   /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartVoxelHeader.icc \
@@ -5498,14 +5367,6 @@ CMakeFiles/phantom_sim.dir/src/SteppingAction.cc.o: /Users/bryphy/U/Nuclear_lab_
 
 /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VPrimaryGenerator.hh:
 
-/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SingleParticleSource.hh:
-
-/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSPosDistribution.hh:
-
-/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSAngDistribution.hh:
-
-/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeneralParticleSourceMessenger.hh:
-
 /Users/bryphy/U/Nuclear_lab_II/Workstation/data/Phantom_01/src/PrimaryGeneratorAction.cc:
 
 /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4PVPlacement.hh:
@@ -5736,8 +5597,6 @@ CMakeFiles/phantom_sim.dir/src/SteppingAction.cc.o: /Users/bryphy/U/Nuclear_lab_
 
 /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SmartTrackStack.hh:
 
-/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeneralParticleSourceData.hh:
-
 /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4VSolid.icc:
 
 /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SceneTreeItem.hh:
@@ -5769,8 +5628,6 @@ CMakeFiles/phantom_sim.dir/src/SteppingAction.cc.o: /Users/bryphy/U/Nuclear_lab_
 /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ProcessManager.icc:
 
 /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4PrimaryVertex.hh:
-
-/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSRandomGenerator.hh:
 
 /Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4Polyhedron.hh:
 
@@ -6242,8 +6099,6 @@ CMakeFiles/phantom_sim.dir/src/SteppingAction.cc.o: /Users/bryphy/U/Nuclear_lab_
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/sched.h:
 
-/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4DataInterpolation.hh:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/pthread/sched.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__iterator/iter_move.h:
@@ -6619,6 +6474,8 @@ CMakeFiles/phantom_sim.dir/src/SteppingAction.cc.o: /Users/bryphy/U/Nuclear_lab_
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/limits.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__type_traits/is_literal_type.h:
+
+/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4ParticleGun.hh:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__algorithm/find_if_not.h:
 
@@ -7486,8 +7343,6 @@ CMakeFiles/phantom_sim.dir/src/SteppingAction.cc.o: /Users/bryphy/U/Nuclear_lab_
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__algorithm/transform.h:
 
-/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4SPSEneDistribution.hh:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__concepts/derived_from.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__chrono/high_resolution_clock.h:
@@ -7749,8 +7604,6 @@ CMakeFiles/phantom_sim.dir/src/SteppingAction.cc.o: /Users/bryphy/U/Nuclear_lab_
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__math/rounding_functions.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__type_traits/detected_or.h:
-
-/Users/bryphy/U/Nuclear_lab_II/Workstation/geant4-dna/install/include/Geant4/G4GeneralParticleSource.hh:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk/usr/include/c++/v1/__fwd/sstream.h:
 

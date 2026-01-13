@@ -12,17 +12,15 @@
 #include "G4SystemOfUnits.hh"
 
 // ============================================================================
-// CODIGO ANTERIOR (ParticleGun) - Headers comentados
+// HEADERS para GPS o ParticleGun (segun USE_GPS)
 // ============================================================================
-// #include "G4ParticleGun.hh"
-// #include "PrimaryGeneratorAction.hh"  // para obtener el gun
-// ============================================================================
+#include "PrimaryGeneratorAction.hh" // Contiene el #define USE_GPS
 
-// ============================================================================
-// CODIGO NUEVO (GPS) - Headers activos
-// ============================================================================
+#if USE_GPS
 #include "G4GeneralParticleSource.hh"
-#include "PrimaryGeneratorAction.hh"
+#else
+#include "G4ParticleGun.hh"
+#endif
 // ============================================================================
 
 #include <cstring>
@@ -63,14 +61,14 @@ void RunAction::BeginOfRunAction(const G4Run *run) {
   // ========================================================================
 
   // ========================================================================
-  // CODIGO NUEVO (GPS):
+  // OBTENER ENERGIA DEL HAZ (compatible con GPS y ParticleGun)
   // ========================================================================
   const PrimaryGeneratorAction *primaryGen =
       dynamic_cast<const PrimaryGeneratorAction *>(
           G4RunManager::GetRunManager()->GetUserPrimaryGeneratorAction());
 
+#if USE_GPS
   if (primaryGen && primaryGen->GetGPS()) {
-    // GPS puede tener distribuciones de energia, obtenemos la energia "mono"
     fBeamEnergy = primaryGen->GetGPS()
                       ->GetCurrentSource()
                       ->GetEneDist()
@@ -79,6 +77,13 @@ void RunAction::BeginOfRunAction(const G4Run *run) {
   } else {
     fBeamEnergy = 0.0;
   }
+#else
+  if (primaryGen && primaryGen->GetParticleGun()) {
+    fBeamEnergy = primaryGen->GetParticleGun()->GetParticleEnergy() / MeV;
+  } else {
+    fBeamEnergy = 0.0;
+  }
+#endif
   // ========================================================================
 
   // ===== Obtener numero de eventos programados =====

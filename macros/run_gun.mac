@@ -1,0 +1,16 @@
+# ============================================================================
+# run_gun.mac - Simulacion simple con ParticleGun
+# ============================================================================
+# Para usar con USE_GPS = 0
+# La configuracion del haz esta FIJA en el codigo:
+#   - Proton 150 MeV
+#   - Posicion: (-40, 0, 0) cm
+#   - Direccion: +X
+# ============================================================================
+
+/run/initialize
+
+# Con ParticleGun, no hay comandos /gps/
+# Solo ejecutamos eventos
+
+/run/beamOn 10000

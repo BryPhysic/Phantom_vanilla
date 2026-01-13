@@ -67,23 +67,27 @@ void sobp_auto() {
   });
 
   // =========================================================
-  // PESOS OPTIMIZADOS PARA 23 CAPAS (128-150 MeV, paso 1 MeV)
-  // Ordenados de menor (128) a mayor (150) energia
-  // Generados por sobp_solver.C
+  // PESOS OPTIMIZADOS - Generados por sobp_solver.C
   // =========================================================
-  std::vector<double> weights23 = {
-    0.0154, 0.0123, 0.0595, 0.0978, 0.0347, 0.0124, 
-    0.0151, 0.0549, 0.0676, 0.0448, 0.0318, 0.0497, 
-    0.0570, 0.0559, 0.0574, 0.0630, 0.0716, 0.0745, 
-    0.0694, 0.0417, 0.0131, 0.0100, 1.0000
-  };
+  // COPIA AQUI el vector que te da sobp_solver.C
+  // El tamaño debe coincidir con nFiles
+  std::vector<double> weights = {0.1716, 0.1412, 0.1806,
+                                 0.2083, 0.2215, 1.0000};
 
   // ===== CREAR HISTOGRAMAS =====
   std::vector<TH1D *> hDose(nFiles);
-  TH1D *hSOBP = new TH1D("hSOBP", "SOBP 4cm Tumor", 500, -15, 35);
+  TH1D *hSOBP = new TH1D("hSOBP", "SOBP", 500, -15, 35);
   hSOBP->SetLineColor(kBlack);
   hSOBP->SetLineWidth(4);
   hSOBP->SetFillStyle(0);
+
+  // Verificar si tenemos pesos para todos los archivos
+  bool useWeights = (weights.size() == nFiles);
+  if (!useWeights) {
+    std::cout << "WARNING: weights.size()=" << weights.size()
+              << " != nFiles=" << nFiles << " -> Using linear fallback"
+              << std::endl;
+  }
 
   // ===== BUCLE DE SUMA =====
   for (int i = 0; i < nFiles; i++) {
@@ -101,14 +105,9 @@ void sobp_auto() {
                "edep*(volumeName==\"Phantom_phys\")", "goff");
     hDose[i]->Smooth(2);
 
-    // Seleccionar peso segun numero de archivos
-    double weight;
-    if (nFiles == 23 && i < 23) {
-      weight = weights23[i];
-    } else {
-      // Fallback: peso lineal
-      weight = 0.3 + 0.7 * ((double)i / (nFiles - 1));
-    }
+    // Usar peso del vector o fallback lineal
+    double weight =
+        useWeights ? weights[i] : (0.3 + 0.7 * ((double)i / (nFiles - 1)));
 
     TH1D *temp = (TH1D *)hDose[i]->Clone();
     temp->Scale(weight);
@@ -131,9 +130,8 @@ void sobp_auto() {
   hSOBP->Draw("HIST C");
   for (int i = 0; i < nFiles; i++) {
     TH1D *clone = (TH1D *)hDose[i]->Clone();
-    double w = (nFiles == 23 && i < 23)
-                   ? weights23[i]
-                   : (0.3 + 0.7 * ((double)i / (nFiles - 1)));
+    double w =
+        useWeights ? weights[i] : (0.3 + 0.7 * ((double)i / (nFiles - 1)));
     clone->Scale(w);
     clone->Draw("HIST C SAME");
   }
